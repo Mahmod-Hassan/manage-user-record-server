@@ -8,7 +8,6 @@ const User = new mongoose.model("User", userSchema);
 // singup api
 router.post('/signup', async (req, res) => {
     const {email, password, ...rest} = req.body;
-    console.log(req.body);
     try {
         const oldUser = await User.findOne({email});
         if(oldUser){

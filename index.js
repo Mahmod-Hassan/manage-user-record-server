@@ -23,7 +23,6 @@ let uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.
 async function connectDB () {
     try{
        await mongoose.connect(uri)
-       console.log('database connected')
     }
     catch{
         console.error('Error connecting to MongoDB:', error);
